@@ -1,0 +1,12 @@
+[Window Terminal]
+cd c://Users/parksm/Documents/sqlite3
+sqlite3 ../R/dcs510.db
+[Sqlite Console]
+.databases
+.tables
+.mode csv
+.import ../R/ws_mexican_restaurants.csv restaurants_table
+.tables
+.schema
+select * from restaurants_table;
+select Rank, "Restaurant Name", Rating, "Phone Number" from restaurants_table where Rating >= 4.5;
